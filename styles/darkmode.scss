@@ -1,0 +1,92 @@
+.dark {
+  background: #161616;
+  color: #fff;
+
+  .nextui-navbar-container {
+    background: #000;
+    color: #fff;
+  }
+
+  .nextui-navbar-collapse {
+    background: rgba(0, 0, 0, 0.8);
+    margin-top: -1px;
+  
+    a {
+      color: #fff;
+    }
+  }
+  
+  #nav-desktop a, #nav-desktop b {
+    color: #fff;
+  }
+
+  .nextui-navbar {
+    .line {
+      background: #fff;
+    }
+  }
+  
+  #darkmode-btn {
+     span {
+      background: transparent !important;
+    } 
+  }
+
+  select {
+    background: #161616;
+  }
+
+  svg {
+    color: #fff;
+  }
+
+  .grid {
+    box-shadow: 1px 1px 10px #1d2024;
+  }
+
+  #invert-options-btn,
+  #translate-btn {
+    background: #0072F5;
+    color: #fff;
+  }
+
+  .nextui-input-wrapper {
+    box-shadow: 0 0 0 2px #444;
+
+    textarea {
+      color: #fff;
+    }
+  }
+
+  #select-container {
+    border-bottom: 1px solid #333;
+  }
+
+  footer {
+    border-top: 1px solid #333;
+
+    svg {
+      color: #0072F5;
+    }
+  }
+
+  .nextui-modal {
+    background: #222;
+
+    #modal-title {
+      color: #fff;
+
+      b {
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .dark {
+    .nextui-navbar-container {
+      color: #fff;
+    }
+  }
+}

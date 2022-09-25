@@ -1,0 +1,51 @@
+.nextui-navbar {
+  button span {
+    background: #fff;
+  }
+}
+
+#darkmode-btn {
+   span {
+    background: transparent !important;
+  }
+}
+
+#nav-desktop {
+  a, b {
+    color: #fff;
+  }
+
+  .nextui-navbar button span {
+    background: transparent !important;
+  }
+}
+
+#nav-mobile {
+  display: none;
+}
+
+#nav-desktop {
+  display: inherit;
+
+  li {
+    margin-right: 25px;
+  }
+}
+
+#nav-desktop a, #nav-desktop b {
+  color: #000;
+}
+
+.nextui-badge {
+  border: none;
+}
+
+@media (max-width: 650px) {
+  #nav-desktop {
+    display: none;
+  }
+
+  #nav-mobile {
+    display: inherit;
+  }
+}
