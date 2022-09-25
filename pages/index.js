@@ -100,7 +100,7 @@ const Home = () => {
 					content='Traductor, Traducir textos, Traducciones'
 				/>
 				<link rel='icon' href='/logo.png' />
-				<link rel='canonnical' href='https://traductor.vercel.app' />
+				<link rel='canonnical' href='https://mitraductor.vercel.app' />
 			</Head>
 
 			<div className='container'>
