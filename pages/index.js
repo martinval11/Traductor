@@ -116,11 +116,11 @@ const Home = () => {
 								>
 									<option value='en'>Inglés</option>
 									<option value='es'>Español</option>
-									<option value='pt'>Portugues</option>
+									<option value='pt'>Portugués</option>
 									<option value='ru'>Ruso</option>
-									<option value='ja'>Japones</option>
+									<option value='ja'>Japonés</option>
 									<option value='de'>Alemán</option>
-									<option value='fr'>Frances</option>
+									<option value='fr'>Francés</option>
 									<option value='it'>Italiano</option>
 									<option value='zh'>Chino</option>
 									<option value='ko'>Coreano</option>
@@ -162,11 +162,11 @@ const Home = () => {
 								>
 									<option value='es'>Español</option>
 									<option value='en'>Inglés</option>
-									<option value='pt'>Portugues</option>
+									<option value='pt'>Portugués</option>
 									<option value='ru'>Ruso</option>
-									<option value='ja'>Japones</option>
+									<option value='ja'>Japonés</option>
 									<option value='de'>Alemán</option>
-									<option value='fr'>Frances</option>
+									<option value='fr'>Francés</option>
 									<option value='it'>Italiano</option>
 									<option value='zh'>Chino</option>
 									<option value='ko'>Coreano</option>
