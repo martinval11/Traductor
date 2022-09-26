@@ -45,6 +45,7 @@ const Home = () => {
 			headers: { 'Content-Type': 'application/json' },
 		}).catch(() => {
 			setConnectionToAPIError(true);
+			setIsShown(false);
 		});
 
 		let data = await res.json();
