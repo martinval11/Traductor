@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { ArrowLeftRight } from 'react-bootstrap-icons';
 import Nav from '../components/Nav';
 import Script from 'next/script';
+import Link from 'next/link';
 
 import {
 	Button,
@@ -22,6 +23,7 @@ const Home = () => {
 	const [secondValue, setSecondValue] = useState('es');
 	const [isShown, setIsShown] = useState(false);
 	const [visible, setVisible] = useState(false);
+	const [connectionToAPIError, setConnectionToAPIError] = useState(false);
 	const [visibleToEmptyChars, setVisibleToEmptyChars] = useState(false);
 
 	const handleMessageChange = (event) => {
@@ -41,11 +43,17 @@ const Home = () => {
 				api_key: '',
 			}),
 			headers: { 'Content-Type': 'application/json' },
+		}).catch(() => {
+			setConnectionToAPIError(true);
 		});
 
 		let data = await res.json();
 		setDataToTranslator(data.translatedText);
 		setIsShown(false);
+	};
+
+	const closeHandlerForAPIError = () => {
+		setConnectionToAPIError(false);
 	};
 
 	const closeHandler = () => {
@@ -104,8 +112,6 @@ const Home = () => {
 			</Head>
 
 			<div className='container'>
-				
-
 				<main>
 					<div className='grid'>
 						<div>
@@ -116,11 +122,11 @@ const Home = () => {
 								>
 									<option value='en'>Inglés</option>
 									<option value='es'>Español</option>
-									<option value='pt'>Portugués</option>
+									<option value='pt'>Portugues</option>
 									<option value='ru'>Ruso</option>
-									<option value='ja'>Japonés</option>
+									<option value='ja'>Japones</option>
 									<option value='de'>Alemán</option>
-									<option value='fr'>Francés</option>
+									<option value='fr'>Frances</option>
 									<option value='it'>Italiano</option>
 									<option value='zh'>Chino</option>
 									<option value='ko'>Coreano</option>
@@ -162,11 +168,11 @@ const Home = () => {
 								>
 									<option value='es'>Español</option>
 									<option value='en'>Inglés</option>
-									<option value='pt'>Portugués</option>
+									<option value='pt'>Portugues</option>
 									<option value='ru'>Ruso</option>
-									<option value='ja'>Japonés</option>
+									<option value='ja'>Japones</option>
 									<option value='de'>Alemán</option>
-									<option value='fr'>Francés</option>
+									<option value='fr'>Frances</option>
 									<option value='it'>Italiano</option>
 									<option value='zh'>Chino</option>
 									<option value='ko'>Coreano</option>
@@ -255,6 +261,43 @@ const Home = () => {
 										Cerrar
 									</Button>
 									<Button auto onPress={() => closeHandlerForEmptyChars()}>
+										Aceptar
+									</Button>
+								</Modal.Footer>
+							</Modal>
+						)}
+
+						{connectionToAPIError && (
+							<Modal
+								closeButton
+								aria-labelledby='modal-title'
+								open={connectionToAPIError}
+								onClose={closeHandlerForAPIError}
+							>
+								<Modal.Header>
+									<Text id='modal-title' size={18}>
+										<h3>Error</h3>
+										Hubo un error al intentar traducir.
+										<br />
+										<a
+											href='https://www.isitdownrightnow.com/libretranslate.de.html'
+											target='_blank'
+											rel='noopener noreferrer'
+										>
+											¿Está el servicio caido?
+										</a>
+									</Text>
+								</Modal.Header>
+								<Modal.Footer>
+									<Button
+										auto
+										flat
+										color='error'
+										onPress={() => closeHandlerForAPIError()}
+									>
+										Cerrar
+									</Button>
+									<Button auto onPress={() => closeHandlerForAPIError()}>
 										Aceptar
 									</Button>
 								</Modal.Footer>
