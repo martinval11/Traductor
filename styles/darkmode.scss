@@ -10,13 +10,24 @@
   .nextui-navbar-collapse {
     background: rgba(0, 0, 0, 0.8);
     margin-top: -1px;
-  
+
     a {
       color: #fff;
     }
   }
-  
-  #nav-desktop a, #nav-desktop b {
+
+
+  #modal-title a {
+    color: #0072F5;
+    transition: all .2s;
+
+    &:hover {
+      color: #0057b9;
+    }
+  }
+
+  #nav-desktop a,
+  #nav-desktop b {
     color: #fff;
   }
 
@@ -25,11 +36,11 @@
       background: #fff;
     }
   }
-  
+
   #darkmode-btn {
-     span {
+    span {
       background: transparent !important;
-    } 
+    }
   }
 
   select {
